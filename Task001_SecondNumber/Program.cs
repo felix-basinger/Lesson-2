@@ -2,23 +2,16 @@
 
 System.Console.Write("Enter three-digit number: ");
 int i = EnterNumber();
-Check();
+if(i < 100 || i >= 1000)
+{
+    System.Console.WriteLine("Error");
+    return;
+}
 System.Console.WriteLine($"Your second digit is: {FindSecondDigit(i)}");
 
 int EnterNumber()
 {   
-    
     return int.Parse(System.Console.ReadLine());
-
-}
-  
-bool Check()
-{
-    if (i > 999 || i < 100)
-    {
-        System.Console.WriteLine("Error! It's not three digit number");
-    } 
-    return false;
 }
 
 int FindSecondDigit(int i)
